@@ -30,7 +30,6 @@ function App() {
 
     setBandInfo(
       <BandForm
-        bandId={bandId}
         bandName={bandName}
         ticketTypes={bandTicketTypes}
         selectedBandId={selectedBandId}

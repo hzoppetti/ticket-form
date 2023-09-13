@@ -1,64 +1,34 @@
-# Create a form for touring bands!
+# Touring Bands!
 
-## Overview
+## Access
 
-For this exercise, you'll create a simple form that allows users to purchase tickets to a concert for a given band.
+This project can be found in [https://github.com/hzoppetti/ticket-form](Heather's GitHub ticket-form) repository.
 
-You'll find included in this repo:
+## Running
 
-    1. Three JSON files that represent the data structure that the form should be able to accommodate
+To run this project, download from the repository above by cloning the project into a local directory. For example,
 
-    NOTE: These are located in `src/band-json/`
+```
+git clone https://github.com/hzoppetti/ticket-form.git
+```
 
-    2. A Wireframe ("BandTickets_Anonymous.png") that should help guide you as a loose representation of what the form should be structured like
-    3. A starter React project (optional)
+This is a Vite project that uses React, Typescript, and Tailwind. You'll want to grab the dependencies by running npm.
 
-There's a react project included that has been scaffolded using `create-react-app` but you can use whatever framework or technology you are most comfortable with. However, it's worth noting that we use React at Act Blue, so if you aren't familiar with React, this might be a good opportunity to get some hands on experience! Feel free to add any javascript libraries that you typically use or think are a good fit for this project. For styling, you're welcome to write custom CSS, use a component library, or do some combination of both.
+```
+npm i
+```
 
-## Acceptance Criteria
+Then you can start your local dev server:
+```
+npm run dev
+```
 
-The acceptance criteria for this exercise is that after consuming any of the JSON objects from the band-json directory, the form should include:
+This makes the project available in your local browser at an address such as `http://127.0.0.1:5173/`
 
-    1. The band name, description, location, date, and image to learn about the concert
-    2. A list of ticket types that includes their metadata and the ability to add any number of tickets of each type
-    3. A total amount section that adds up the ticket prices
-    4. Some basic inputs for adding credit card and personal information
-    5. A button to purchase the tickets
+However, I also have this project running on Netlify here: `https://meek-mermaid-c73df7.netlify.app`
 
-## Some Things To Consider
+## Notable Notes
 
-Don't worry about any actual transaction being fired - it's enough to just fire a console log when the purchase button is clicked.
+I admit to taking a bit longer on this assignment than the suggested 2 hours. I took approximately 2 hours for the core and then hated how it looked and when back and implemented Tailwind. We had been playing around with Tailwind at my last job and I wanted to explore it a little more, so I took some time to do that here.
 
-The tour date cost is listed as cents, so `500` would be `$5`.
-
-The wireframe is a rough estimate of the layout of the form that we expect, but it's not necessary to match it exactly. The most important parts are the general page structure (two columns, with the description area on the left), and an approximate location of where the various page elements should be.
-
-This exercise is specifically geared towards candidates applying for a Front End focused role at ATS, which is why we aren't asking for any data persistence or API development.
-
-## Rough time estimate for this exercise
-
-Doing a technical exercise on top of having all the other stuff you have to do during a week can be a challenge, so first off: thank you for taking the time to give this a shot.
-
-In general, we recommend spending **about 2 hours on this exercise**, the first chunk of which is likely just reading through this document and choosing an approach. If you can't find that amount of time because of work or life or anything else, get through as much as you are able to (and please feel free to reach out to get additional time!). We'll take a look at your submission no matter how far long you've made it in the process.
-
-If you complete the core acceptance criteria, and want to get creative with the exercise, then you might consider 1 or 2 of the following options:
-
-    1. Styling the forms so they look fabulloooussss
-    2. Persist the transactions in a data store in some way
-    3. Write some tests using Jest (or any library you prefer)
-    4. Add types
-    5. Deploy this somewhere (we use Heroku, so that might be a good option to learn about!)
-
-## Questions
-
-If you have questions about this assignment, from the specific to the broad, please don't hesitate to reach out to your recruiter point of contact or to the hiring manager. Good luck!
-
-## Submission
-
-To submit your solution, please upload a text file or `README` to Greenhouse that includes the following:
-
-1. A link to your code that we can access, such as a Google Drive folder or a Github repo
-2. A description of how to run your code
-3. Anything else we should know
-
-If you're having any trouble at all with Greenhouse, feel free to email us the file instead.
+I sadly didn't spend a lot of time on form validation or accessibility. There is a lot that could be done in both of those places but I ran out of time.

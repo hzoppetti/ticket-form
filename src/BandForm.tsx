@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 
 /**
@@ -25,18 +26,12 @@ export interface TicketInfo {
 }
 
 interface BandFormProps {
-  bandId: string;
   bandName: string;
   ticketTypes: TicketInfo[];
   selectedBandId: string;
 }
 
-const BandForm = ({
-  bandId,
-  bandName,
-  ticketTypes,
-  selectedBandId,
-}: BandFormProps) => {
+const BandForm = ({ bandName, ticketTypes, selectedBandId }: BandFormProps) => {
   const [ticketArray, setTicketArray] = useState<Ticket[]>(() => {
     const tArray: Ticket[] = [];
     for (let i = 0; i < ticketTypes.length; ++i) {
@@ -129,9 +124,7 @@ const BandForm = ({
     });
   }
 
-  function handleChange(
-    event: { target: { name: any; value: any } } | undefined
-  ) {
+  function handleChange(event: { target: { name: any; value: any } }) {
     const { name, value } = event.target;
 
     // do some form validation
@@ -189,13 +182,17 @@ const BandForm = ({
     });
   }
 
-  const validateForm = (errors) => {
+  const validateForm = (
+    errors: { [s: string]: unknown } | ArrayLike<unknown>
+  ) => {
     let valid = true;
-    Object.values(errors).forEach((val) => val.length > 0 && (valid = false));
+    Object.values(errors).forEach(
+      (val: any) => val.length > 0 && (valid = false)
+    );
     return valid;
   };
 
-  function submitForm(event) {
+  function submitForm(event: { preventDefault: () => void }) {
     event.preventDefault();
 
     if (validateForm(errors)) {
@@ -235,7 +232,7 @@ const BandForm = ({
     }
   }
 
-  const ticketInfo = ticketTypes.map((ticket, index) => {
+  const ticketInfo = ticketTypes.map((ticket) => {
     const indexOfTicket = ticketArray.findIndex(
       (x) => ticket.name === x.ticketName
     );
