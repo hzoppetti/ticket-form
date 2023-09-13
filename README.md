@@ -2,7 +2,7 @@
 
 ## Access
 
-This project can be found in [Heather's GitHub ticket-form repository](https://github.com/hzoppetti/ticket-form) repository.
+This project can be found in [Heather's GitHub ticket-form repository](https://github.com/hzoppetti/ticket-form).
 
 ## Running
 
